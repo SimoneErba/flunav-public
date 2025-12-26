@@ -10,7 +10,7 @@
     <link rel="icon" type="image/svg+xml" href="/small_logo.svg" />
     <style>
         :root {
-            --brand-blue: #0EA5E9; /* Tailwind Sky Blue */
+            --brand-blue: #0EA5E9;
             --dark-bg: #0F172A;
             --dark-card: #1E293B;
             --text-main: #F8FAFC;
@@ -48,6 +48,10 @@
             margin-bottom: 2.5rem;
             line-height: 1.6;
         }
+        .highlight {
+            font-weight: 600;
+            color: var(--text-main);
+        }
         .btn {
             display: inline-block;
             padding: 16px 32px;
@@ -69,7 +73,7 @@
             justify-content: center;
             gap: 2rem;
             margin-top: 3rem;
-            flex-wrap: wrap; /* Allows cards to stack on smaller screens */
+            flex-wrap: wrap;
         }
         .feature-card {
             background-color: var(--dark-card);
@@ -96,9 +100,21 @@
             font-size: 1rem;
             color: var(--text-muted);
         }
-        .highlight {
-            font-weight: 600; /* Use font-weight instead of <b> */
-            color: var(--text-main);
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: flex;
+            gap: 20px;
+        }
+        .footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer a:hover {
+            color: var(--brand-blue);
         }
     </style>
 </head>
