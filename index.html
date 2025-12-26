@@ -4,25 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flunav | Digital Twin for Conveyor Systems</title>
+    <meta name="description" content="The Digital Twin platform for simulating and visualizing industrial conveyor systems. See the exact position of every item in real-time, analyze historical incidents, and optimize your flow.">
+    <meta name="keywords" content="digital twin, conveyor system, logistics, simulation, real-time tracking, supply chain, Industry 4.0">
+    <meta name="author" content="Flunav">
+    <link rel="icon" type="image/svg+xml" href="/small_logo.svg" />
     <style>
         :root {
             --brand-blue: #0EA5E9; /* Tailwind Sky Blue */
             --dark-bg: #0F172A;
+            --dark-card: #1E293B;
             --text-main: #F8FAFC;
             --text-muted: #94A3B8;
+            --border-color: #334155;
         }
         body {
             margin: 0;
+            padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--dark-bg);
             color: var(--text-main);
+            text-align: center;
+        }
+        .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
+            min-height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box;
         }
         h1 {
             font-size: clamp(2.5rem, 6vw, 4rem);
@@ -46,7 +56,6 @@
             text-decoration: none;
             border-radius: 8px;
             transition: transform 0.2s, box-shadow 0.2s;
-            border: 2px solid transparent;
             color: white;
             background-color: var(--brand-blue);
             box-shadow: 0 4px 14px rgba(14, 165, 233, 0.39);
@@ -55,42 +64,81 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
         }
-        p.setup-info {
-            font-size: 1rem;
-            color: var(--text-muted);
-            margin-top: 2.5rem;
-            border-top: 1px solid #334155;
-            padding-top: 2rem;
-            max-width: 500px;
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap; /* Allows cards to stack on smaller screens */
         }
-        .footer {
-            position: absolute;
-            bottom: 20px;
+        .feature-card {
+            background-color: var(--dark-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            max-width: 280px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        .feature-card p {
             font-size: 0.9rem;
             color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0;
+        }
+        p.setup-info {
+            margin-top: 3rem;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+        .highlight {
+            font-weight: 600; /* Use font-weight instead of <b> */
+            color: var(--text-main);
         }
     </style>
 </head>
 <body>
 
-    <h1>Navigate your data</h1>
-    
-    <p class="subtitle">
-        The Digital Twin for **conveyor systems**. See the **position** of every item in real-time,
-        analyze historical incidents, and simulate future scenarios to optimize your flow.
-    </p>
+    <div class="container">
+        <h1>Navigate your data</h1>
+        
+        <p class="subtitle">
+            The Digital Twin for **conveyor systems**. See the exact **position** of every item in real-time,
+            analyze historical incidents, and simulate future scenarios to optimize your flow.
+        </p>
 
-    <a href="https://demo.flunav.com" class="btn">
-        Launch Live Demo &rarr;
-    </a>
+        <a href="https://demo.flunav.com" class="btn">
+            Launch Live Demo &rarr;
+        </a>
 
-    <p class="setup-info">
-        <b>Easy to integrate:</b> Send your existing sensor events. We visualize the rest.
-    </p>
-
-    <div class="footer">
-        &copy; 2025 Flunav. All rights reserved.
+        <div class="features">
+            <div class="feature-card">
+                <h3>&#128269; Real-time Visualization</h3>
+                <p>See your entire facility in one view and react to live status changes instantly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>&#128337; Historical Playback</h3>
+                <p>"Time travel" to analyze past incidents and understand cascading failures.</p>
+            </div>
+            <div class="feature-card">
+                <h3>&#128161; "What-If" Simulation</h3>
+                <p>Test new business rules on historical data in an isolated sandbox, without risk.</p>
+            </div>
+        </div>
+        
+        <p class="setup-info">
+            <span class="highlight">Easy to integrate:</span> Send your existing sensor events. We visualize the rest.
+        </p>
     </div>
-
+    <div class="footer">
+        <span>&copy; 2025 Flunav</span>
+        <span>&bull;</span>
+        <a href="mailto:admin@flunav.com">Contact Us</a>
+    </div>
 </body>
 </html>
